@@ -1,0 +1,13 @@
+/*
+ * HULTRASONIC_Config.h
+ *
+ *  Created on: Mar 21, 2022
+ *      Author: Dell
+ */
+
+#ifndef HAL_HULTRASONIC_HULTRASONIC_CONFIG_H_
+#define HAL_HULTRASONIC_HULTRASONIC_CONFIG_H_
+
+
+
+#endif /* HAL_HULTRASONIC_HULTRASONIC_CONFIG_H_ */
