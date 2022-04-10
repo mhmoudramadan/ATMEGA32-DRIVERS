@@ -18,10 +18,12 @@ void HTEMP_VidInit(void)
 uint8 HTEMP_uintGetTemp(uint8 copy_uint8Channel)
 {
 	MADC_VidADCStartSingleConversion(copy_uint8Channel);
-	uint16 Loc_AnalogValue=0;
-	uint32 Loc_TemperatureValue=0;
-	Loc_AnalogValue = MADC_uint16Read();
-	Loc_TemperatureValue=(Loc_AnalogValue*150*50) / (1023*1.5);
+	uint16 Loc_AnalogValueMV=0;
+	uint32 Loc_DigitalValue=0;
+	uint16 Loc_TemperatureValue=0;
+	Loc_DigitalValue = MADC_uint16Read();
+	Loc_AnalogValueMV=(Loc_DigitalValue*5000) / (1024);
+	Loc_TemperatureValue=Loc_AnalogValueMV / (10);
 	return Loc_TemperatureValue;
 }
 
